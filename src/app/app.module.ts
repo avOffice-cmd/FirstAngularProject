@@ -4,15 +4,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { HomeComponent } from './AllComponents/home/home.component';
+import { LinkComponent } from './AllComponents/link/link.component';
+
+// It is called deparator
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    LinkComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
+  // here we can put service name or class name
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports:[]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor()
+  {
+    console.log("Module loaded......");
+    
+  }
+}
