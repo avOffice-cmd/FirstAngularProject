@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -18,10 +18,18 @@ import { Component } from '@angular/core';
   //     </form>
   //   </div>
   // `,
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  // encapsulation:ViewEncapsulation.ShadowDom
 })
 export class AppComponent {
   title = 'AngularProject1';
+  
+  //  get data //
+  Cdata:any;
+  getdata(val:any)
+  {
+    this.Cdata = val;
+  }
   constructor()
   {
     console.log("Component loaded......");

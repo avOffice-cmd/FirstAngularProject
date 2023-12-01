@@ -34,5 +34,19 @@
     </div>
   </div>
 </nav>
+
+<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
 <!-- <router-outlet></router-outlet> -->
-<app-home></app-home>
+
+<!-- ParentComponent : <input type="text" #PComponent (keyup)="0" /><BR><BR>
+ParentComponent2 : <input type="text" #PComponent2 (keyup)="0" /> -->
+
+
+<!-- <app-home [Pdata]="PComponent.value" [Pdata2]="PComponent2.value"></app-home> -->
+
+
+<div  style="height: 30px; width: 400px; background-color: greenyellow; color: rgb(17, 15, 15);"> 
+  value of child component : {{Cdata}}
+</div>
+
+<app-home (childevent)="getdata($event)"></app-home>

@@ -1,6 +1,18 @@
 <p>Hello From home works!</p>
-
+<p>{{name.toLowerCase()}}</p>
 <button>btn1</button>
 <button>btn2</button>
 <button>btn3</button>
 <button>btn4</button>
+<button>btn4</button>
+
+
+<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsuliquid fugiat!</h1>
+<!-- 
+value of child Component : {{Pdata}}
+value of child Component2 : {{Pdata2}} -->
+
+
+<!-- transfer data child to ParentComponent -->
+
+ChildComponent : <input type="text" #Ccomponent (keyup)="onchange(Ccomponent.value)"/>
