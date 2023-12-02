@@ -35,8 +35,158 @@
   </div>
 </nav>
 
-<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-<!-- <router-outlet></router-outlet> -->
+<!-- <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3> -->
+
+
+<!-- <input type="radio" name="radio1" (click)="changeValue(true)"> True
+<input type="radio" name="radio2" (click)="changeValue(false)"> False -->
+<!-- 
+<h5 style="color: aqua;">using ngIf</h5>
+<div *ngIf="isvalid">
+  This is valid data
+</div>
+<div *ngIf="!isvalid">
+  This is not valid data
+</div> -->
+
+
+<!-- <h5 style="color: aqua;">using ngIf and else</h5>
+<ng-container *ngIf="isvalid; else notValid">
+  <div>
+    This is valid data
+  </div>
+</ng-container>
+<ng-template #notValid>
+  <div>
+    This is not valid data
+  </div>
+</ng-template> -->
+
+
+<!-- <h5 style="color: aqua;">using ngIf , else and then</h5> 
+<div *ngIf="isvalid; then thenBlock; else notValid"></div>
+
+<ng-template #thenBlock>
+  <div>
+    This is valid data
+  </div>
+</ng-template>
+
+<ng-template #notValid>
+  <div>
+    This is not valid data
+  </div>
+</ng-template> -->
+
+
+<!-- switch case -->
+<!-- Display the entered username in real-time -->
+<!-- <div> -->
+  <!-- <label for="usernameInput">Enter Username:</label> -->
+  <!-- Use (input) event binding to capture input changes -->
+  <!-- <input id="usernameInput" [value]="userName" (input)="onInputChange($event)" placeholder="Type username" /> -->
+  <!-- <input [(ngModel)] = "userName" placeholder="Type username" /> -->
+  
+<!-- </div> -->
+
+
+<!-- <div [ngSwitch]="userName">
+  <div *ngSwitchCase="'John'">
+    <h2>Welcome, John!</h2>
+    <p>This is content for John.</p>
+  </div>
+  <div *ngSwitchCase="'salil'">
+    <h2>Welcome, salil!</h2>
+    <p>This is content for salil.</p>
+  </div>
+  <div *ngSwitchDefault>
+    <h2>Welcome, Guest!</h2>
+    <p>This is default content for users other than John and Jane.</p>
+  </div>
+</div> -->
+
+
+     <!-- for loop -->
+
+   
+<!-- <ul>
+  <li *ngFor="let student of students">
+    {{ student.name }}
+    {{ student.age }}
+    {{ student.gender }}
+    {{ student.grade }}
+  </li>
+</ul> -->
+
+<!-- <h2>NgFor</h2>
+<ul>
+  <li *ngFor="let student of students; let i = index">
+    Index: {{ i }}, Name: {{ student.name }}, Age: {{ student.age }}, Gender: {{ student.gender }}, Grade: {{ student.grade }}
+  </li>
+</ul> -->
+<!-- <h2>NgFor</h2>
+<ul>
+  <li *ngFor="let student of students; let i = index">
+    Index: {{ i }}, Name: {{ student.name }}, Age: {{ student.age }},
+    Gender: {{ student.gender }}, Grade: {{ student.grade }},
+    {{ student.gender === 'Male' ? '♂️' : '♀️' }}
+  </li>
+</ul> -->
+
+<!-- <h2>NgFor</h2>
+<ul>
+  <li *ngFor="let student of students; let i = index">
+    Index: {{ i }}, Name: {{ student.name }}, Age: {{ student.age }},
+    Gender: {{ student.gender }}, Grade: {{ student.grade }},
+    {{ student.gender === 'Male' ? '♂️' : '♀️' }}
+    
+    <span [ngClass]="{'grade-A': student.grade === 'A', 'grade-B': student.grade === 'B', 'grade-C': student.grade === 'C'}">
+      Grade Style: {{ student.grade }}
+    </span>
+  </li>
+</ul> -->
+
+<!-- <div>
+  <p>Average Age: {{ calculateAverageAge() }}</p>
+</div> -->
+
+<!-- <h2>NgFor</h2>
+
+<label for="minAgeInput">Minimum Age:</label>
+<input id="minAgeInput" [(ngModel)]="minAge" type="number" />
+
+<label for="nameSearchInput">Search by Name:</label>
+<input id="nameSearchInput" [(ngModel)]="nameSearch" /> -->
+
+<!-- <ul>
+  <li *ngFor="let student of filteredStudents; let i = index">
+    Index: {{ i }}, Name: {{ student.name }}, Age: {{ student.age }},
+    Gender: {{ student.gender }}, Grade: {{ student.grade }},
+    {{ student.gender === 'Male' ? '♂️' : '♀️' }}
+    
+    <span [ngClass]="{'grade-A': student.grade === 'A', 'grade-B': student.grade === 'B', 'grade-C': student.grade === 'C'}">
+      Grade Style: {{ student.grade }}
+    </span>
+  </li>
+</ul>
+
+<div>
+  <p>Average Age: {{ calculateAverageAge() }}</p>
+</div> -->
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
+
+
+
+
+                              <!-- PARENT TO CHILD -->
 
 <!-- ParentComponent : <input type="text" #PComponent (keyup)="0" /><BR><BR>
 ParentComponent2 : <input type="text" #PComponent2 (keyup)="0" /> -->
@@ -45,8 +195,10 @@ ParentComponent2 : <input type="text" #PComponent2 (keyup)="0" /> -->
 <!-- <app-home [Pdata]="PComponent.value" [Pdata2]="PComponent2.value"></app-home> -->
 
 
+                           <!-- CHAILD TO PARENT -->
+<!-- 
 <div  style="height: 30px; width: 400px; background-color: greenyellow; color: rgb(17, 15, 15);"> 
   value of child component : {{Cdata}}
 </div>
 
-<app-home (childevent)="getdata($event)"></app-home>
+<app-home (childevent)="getdata($event)"></app-home> -->

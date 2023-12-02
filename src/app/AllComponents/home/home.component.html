@@ -7,11 +7,49 @@
 <button>btn4</button>
 
 
-<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsuliquid fugiat!</h1>
+<h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsuliquid fugiat!</h3>
 <!-- 
 value of child Component : {{Pdata}}
 value of child Component2 : {{Pdata2}} -->
 
+
+<h2>Track by Example</h2>
+<table class="styled-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Course</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of students; let i=index; trackBy: trackByStudentsid">
+      <td>{{ i + 1 }}</td>
+      <td>{{ s.studentsid }}</td>
+      <td>{{ s.name }}</td>
+      <td>{{ s.age }}</td>
+      <td>{{ s.gender }}</td>
+      <td>{{ s.course }}</td>
+    </tr>
+  </tbody>
+  
+</table>
+
+
+
+
+
+
+
+
+
+<button (click)="getmorestudents()">Get more students</button>
+
+
+<br><br><br>
 
 <!-- transfer data child to ParentComponent -->
 

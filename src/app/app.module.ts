@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { HomeComponent } from './AllComponents/home/home.component';
 import { LinkComponent } from './AllComponents/link/link.component';
+import { FormsModule } from '@angular/forms';
 
 // It is called deparator
 @NgModule({
@@ -16,7 +17,8 @@ import { LinkComponent } from './AllComponents/link/link.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   // here we can put service name or class name
   providers: [],

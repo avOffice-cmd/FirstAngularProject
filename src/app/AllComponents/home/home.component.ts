@@ -31,4 +31,74 @@ export class HomeComponent  {
     this.childevent.emit(val);
     
   }
+
+  ///////////////////////////////////////////////////////////////////////
+
+  students: any[];
+
+  constructor() {
+    this.students = [
+      {
+        studentsid: 1,
+        name: 'achal',
+        gender: 'male',
+        age: 27,
+        course: '.net'
+      },
+      {
+        studentsid: 2,
+        name: 'salil',
+        gender: 'male',
+        age: 30,
+        course: 'Java'
+      },
+      {
+        studentsid: 3,
+        name: 'rohit',
+        gender: 'male',
+        age: 25,
+        course: 'Python'
+      }
+     
+    ];
+  }
+  getmorestudents():void
+  {
+    this.students = [
+      {
+        studentsid: 1,
+        name: 'achal',
+        gender: 'male',
+        age: 27,
+        course: '.net'
+      },
+      {
+        studentsid: 2,
+        name: 'salil',
+        gender: 'male',
+        age: 30,
+        course: 'Java'
+      },
+      {
+        studentsid: 3,
+        name: 'rohit',
+        gender: 'male',
+        age: 25,
+        course: 'Python'
+      },
+      {
+        studentsid: 4,
+        name: 'kkkk',
+        gender: 'male',
+        age: 27,
+        course: 'sql'
+      }
+     
+    ];
+  }
+
+  trackByStudentsid(index: number, student: any): string {
+    return student.studentsid;
+  }
+  
 }
